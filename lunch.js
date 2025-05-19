@@ -13,10 +13,22 @@
  * in minutes.
  */
 
-function whatToDoForLunch(hungry, availableTime) {
-  console.log("hungry is", hungry);
-  console.log("availableTime is", availableTime);
-}
+
+const whatToDoForLunch = function(hungry, availableTime) {
+  if (!hungry) {
+    console.log('Get back to work.');
+    return;
+  }
+
+  if (availableTime < 20) {
+    console.log('Pick something up and eat it in the lab.');
+  } else if (availableTime <= 30) {
+    console.log('Try a place nearby.');
+  } else {
+    console.log("You're in a bootcamp — reconsider how much time you actually have to spare.");
+  }
+};
+
 
 
 /*
